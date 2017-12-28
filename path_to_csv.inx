@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>Path To CSV</_name>
+    <id>com.github.mo10.path_to_csv</id>
+    <dependency type="executable" location="extensions">path_to_csv.py</dependency>
+    <dependency type="executable" location="extensions">path_to_csv.py</dependency>
+
+    <!-- start UI -->
+    <param name="notice" type="description" xml:space="preserve">将Path导出为CSV文件</param>
+    <param name="makedots" type="boolean" _gui-text="标记节点">true</param>
+    <param name="fontsize" type="string" _gui-text="Font size:">5</param>
+    <param name="dotsize" type="string" _gui-text="Dot size:">5</param>
+    <param name="savepath" type="string" _gui-text="保存到路径:">C:\Inkscape\export_csv</param>
+    <param name="openpath" type="boolean" _gui-text="完成后打开文件夹">true</param>
+    <!-- classify which menu it appears under - can be new name -->
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu _name="Altium Designer"/> <!-- which menu under Extensions -->
+        </effects-menu>
+    </effect>
+    <!-- py file again -->
+    <script>
+        <command reldir="extensions" interpreter="python">path_to_csv.py</command>
+    </script>
+</inkscape-extension>
